@@ -1,0 +1,122 @@
+/* 공통부분 CSS */
+@charset "utf-8";
+
+/* 콘텐츠 영역 시작 */
+/* 비주얼 콘텐츠 영역 시작 */
+#visualContents {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+#visualContents img {
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+#visualContents p {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  text-align: right;
+}
+/* 스포츠 콘텐츠 영역 시작 */
+#sportsContainer {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+}
+#sportsContainer div.visualImg {
+  margin: 0;
+  padding: 20px 0;
+  display: inline-block;
+  width: 25%;
+  position: relative;
+  height: 250px;
+  text-align: center;
+  cursor: pointer;
+}
+.boxing img:first-child {
+  width: 200px;
+  height: 200px;
+}
+.boxing img:nth-of-type(2) {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 100px;
+  top: 20px;
+}
+.swimming img:first-child {
+  width: 250px;
+  height: 250px;
+}
+.swimming img:nth-of-type(2) {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 70px;
+  top: 115px;
+}
+.climing img:first-child {
+  width: 200px;
+  height: 200px;
+}
+.climing img:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 85px;
+  top: 130px;
+}
+/* .climing img:last-child {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 110px;
+  top: 10px;
+} */
+.pilates img {
+  width: 200px;
+  height: 200px;
+}
+#sportsContainer p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+#sportsContainer .swimming p {
+  margin-top: -45px;
+}
+
+/* 신청 콘텐츠 영역 */
+#applicationContents {
+  margin-top: 30px;
+}
+#applicationContents ul {
+  text-align: center;
+}
+#applicationContents ul li {
+  display: inline-block;
+}
+#applicationContents ul li:first-of-type {
+  margin-right: 50px;
+}
+
+#applicationContents ul li a {
+  position: relative;
+}
+#applicationContents ul li img {
+  width: 500px;
+  height: 250px;
+}
+#applicationContents p {
+  display: inline-block;
+  padding: 10px 15px;
+  width: 200px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  z-index: 10;
+}

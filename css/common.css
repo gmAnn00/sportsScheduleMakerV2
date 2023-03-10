@@ -70,6 +70,7 @@ body {
   font-family: "NanumSquareRoundR";
   color: #000;
   background-color: #fff;
+  padding-top: 120px;
 }
 #header,
 #contentsArea,
@@ -77,4 +78,152 @@ body {
   width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+#footer {
+  width: 100%;
+}
+
+/* 헤더 영역 시작 */
+#header {
+  margin: 0 auto;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  background: #8a2be2;
+  z-index: 10;
+  /* text-align: center; */
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+}
+.logo img {
+  width: 250px;
+  height: 100px;
+}
+.mainMenu {
+  height: 120px;
+  /* padding-left: 290px; */
+  font-size: 1.3em;
+  font-weight: bold;
+  /* margin-left: 100px; */
+  /* overflow: hidden; */
+  text-align: center;
+}
+/* 메인메뉴의 상위 메뉴 */
+.mainMenu > li {
+  position: relative;
+  padding: 15px;
+  top: 30px;
+  /*left: 10px;*/
+}
+.mainMenu > li:last-child {
+  background: #000;
+  /*width: 100px;*/
+  border-radius: 5px;
+  position: absolute;
+  top: 22px;
+  right: 50px;
+  text-align: center;
+}
+.mainMenu > li > a {
+  color: #fff;
+  padding: 10px 15px;
+}
+.mainMenu li,
+.mainMenu a {
+  display: inline-block;
+}
+/* 메인 메뉴의 하위 메뉴 */
+.mainMenu li:hover ul {
+  display: block;
+  background: #fff;
+}
+.mainMenu ul {
+  display: none;
+  position: absolute;
+  left: -10px;
+  z-index: 15;
+  border-radius: 10px;
+}
+.mainMenu ul li {
+  width: 150px;
+  padding: 10px;
+}
+.mainMenu ul li a {
+  color: #000;
+  font-weight: normal;
+  padding: 15px;
+}
+.mainMenu ul li a:hover {
+  color: #8a2be2;
+}
+/* 헤더 영역 종료 */
+
+/* 메인 콘텐츠 영역 시작 */
+#contentsArea {
+  min-height: 400px;
+  padding: 0;
+}
+/* 메인 콘텐츠 영역 종료 */
+
+/* 푸터 영역 시작 */
+#footer {
+  padding: 15px 0;
+  height: 200px;
+  background: #ccc;
+}
+#footerInner {
+  position: relative;
+}
+.guide {
+  text-align: center;
+}
+.guide .snsContainer {
+  text-align: right;
+}
+.guide .snsContainer a {
+  display: inline-block;
+  margin-left: 20px;
+}
+.guide .snsContainer img {
+  width: 50px;
+  height: 50px;
+}
+.footerLogo {
+  position: absolute;
+  left: -10px;
+  top: 75px;
+  width: 250px;
+  height: 100px;
+}
+.guide li {
+  display: inline-block;
+  margin: 10px 30px 10px 30px;
+}
+.guide li a {
+  display: inline-block;
+  color: #666;
+  padding: 10px 15px 10px 0;
+}
+address {
+  font-style: normal;
+  margin-bottom: 5px;
+  position: absolute;
+  left: 260px;
+  top: 120px;
+}
+address span {
+  display: block;
+  margin-bottom: 5px;
+}
+address span::before {
+  content: "·";
+  padding: 0 10px 0 0;
+}
+#footerInner p {
+  position: absolute;
+  left: 260px;
+  top: 190px;
 }

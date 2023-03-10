@@ -35,8 +35,9 @@
             </li>
             <li><a href="#">이용 안내</a></li>
             <li><a href="#">공지사항</a></li>
+            <li><a href="#">마이페이지</a></li>
             <li><a href="login.html">로그인</a></li>
-            <li><a href="reservation.html">예약하기</a></li>
+            <li class="liReserve"><a href="reservation.html">예약하기</a></li>
           </ul>
         </nav>
       </header>
@@ -48,6 +49,7 @@
         <div id="visualContents">
           <img src="images/visual_img2.jpg" alt="visual image" />
           <p>한번에 해결하는 종합 스포츠 예약 플랫폼</p>
+          <p>Sports Schedule Maker</p>
         </div>
         <!-- 비주얼 콘텐츠 영역 종료 -->
 
@@ -57,17 +59,21 @@
             <div class="visualImg boxing">
               <img src="images/boxing-ring.png" alt="boxing-ring" />
               <img src="images/boxing-gloves.png" alt="boxing-gloves" />
+              <p>복싱</p>
             </div>
             <div class="visualImg swimming">
               <img src="images/swimming-pool.png" alt="swimming-pool" />
               <img src="images/swimming.png" alt="swimming" />
+              <p>수영</p>
             </div>
             <div class="visualImg climing">
               <img src="images/climbing-wall.png" alt="climbing-wall" />
               <img src="images/climbing.png" alt="climbing" />
+              <p>클라이밍</p>
             </div>
-            <div class="pilates">
+            <div class="visualImg pilates">
               <img src="images/pilates.png" alt="pilates" />
+              <p>필라테스</p>
             </div>
           </div>
         </div>
@@ -164,10 +170,10 @@
           <section class="guide">
             <h2 class="hidden">사이트 이용 안내</h2>
             <div class="snsContainer">
-              <img src="images/youtube.png" alt="youtube" />
-              <img src="images/instagram.png" alt="instagram" />
-              <img src="images/facebook.png" alt="facebook" />
-              <img src="images/twitter.png" alt="twitter" />
+              <a href="#"><img src="images/youtube.png" alt="youtube" /></a>
+              <a href="#"><img src="images/instagram.png" alt="instagram" /></a>
+              <a href="#"><img src="images/facebook.png" alt="facebook" /></a>
+              <a href="#"><img src="images/twitter.png" alt="twitter" /></a>
             </div>
             <img src="images/logo_nobg.png" alt="logo" class="footerLogo" />
             <ul class="guide">
@@ -198,5 +204,7 @@
       <!-- 푸터 영역 종료 -->
     </div>
     <!-- wrapper(전체 콘텐츠) 영역 종료-->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

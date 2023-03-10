@@ -1,0 +1,80 @@
+/* 공통부분 CSS */
+@charset "utf-8";
+
+/* 초기화 */
+html,
+body,
+div,
+header,
+nav,
+section,
+aside,
+article,
+footer,
+figure,
+figcaption,
+legend,
+fieldset,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+p,
+img,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+ul {
+  list-style: none;
+}
+fieldset {
+  border: 0;
+}
+
+/* 숨김 콘텐츠 */
+.hidden,
+legend {
+  position: absolute;
+  left: -9999px;
+}
+
+/* 기본 스타일 */
+/* 폰트 */
+@font-face {
+  font-family: "NanumSquareRoundR";
+  src: url(font/NanumSquareRoundR.ttf);
+}
+@font-face {
+  font-family: "NanumSquareRoundB";
+  src: url(font/NanumSquareRoundB.ttf) format("truetype");
+}
+
+a:link {
+  color: #4f4f4f;
+  text-decoration: none;
+}
+a:visited {
+  color: #8a8e91;
+}
+body {
+  font-family: "NanumSquareRoundR";
+  color: #000;
+  background-color: #fff;
+}
+#header,
+#contentsArea,
+#footerInner {
+  width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

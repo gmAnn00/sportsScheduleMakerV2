@@ -5,20 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sports Schedule Maker</title>
     <link rel="shortcut icon" href="images/running-shoes.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <!-- wrapper(전체 콘텐츠) 영역 시작-->
     <div id="wrapper">
       <!-- 헤더 영역 시작 -->
-      <header id="header"></header>
-      <!-- 헤더 영역 시작 -->
-
-      <!-- 비주얼 영역 시작 -->
-      <div id="visual"></div>
-      <!-- 비주얼 영역 종료 -->
+      <header id="header">
+        <!-- 로고 -->
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="images/logo_nobg.png" alt="logo" />
+          </a>
+        </h1>
+        <!-- 메인메뉴 -->
+        <nav>
+          <h2 class="hidden">메인메뉴</h2>
+          <ul class="mainMenu">
+            <li>
+              <a href="#">운동 소개</a>
+              <ul class="aboutSports">
+                <li><a href="#">복싱</a></li>
+                <li><a href="#">수영</a></li>
+                <li><a href="#">클라이밍</a></li>
+                <li><a href="#">필라테스</a></li>
+              </ul>
+            </li>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="reservation.html">예약하기</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- 헤더 영역 종료 -->
 
       <!-- 콘텐츠 영역 시작 -->
-      <div id="contextsArea"></div>
+      <div id="contentsArea">
+        <!-- 비주얼 콘텐츠 영역 시작 -->
+        <div id="visualContents">
+          <img src="images/visual_img2.jpg" alt="visual image" />
+          <p>한번에 해결하는 종합 스포츠 예약 플랫폼</p>
+        </div>
+        <!-- 비주얼 콘텐츠 영역 종료 -->
+
+        <!-- 스포츠 콘텐츠 영역 시작 -->
+        <div id="sportsContents">
+          <div id="sportsContainer">
+            <div class="visualImg boxing">
+              <img src="images/boxing-ring.png" alt="boxing-ring" />
+              <img src="images/boxing-gloves.png" alt="boxing-gloves" />
+            </div>
+            <div class="visualImg swimming">
+              <img src="images/swimming-pool.png" alt="swimming-pool" />
+              <img src="images/swimming.png" alt="swimming" />
+            </div>
+            <div class="visualImg climing">
+              <img src="images/climbing-wall.png" alt="climbing-wall" />
+              <img src="images/climbing.png" alt="climbing" />
+            </div>
+            <div class="pilates">
+              <img src="images/pilates.png" alt="pilates" />
+            </div>
+          </div>
+        </div>
+        <!-- 스포츠 콘텐츠 영역 종료 -->
+
+        <!-- 신청 콘텐츠 영역 시작 -->
+        <div id="applicationContents">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/temp_picture.png" alt="" />
+                <p>일일 체험 신청하기</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/temp_picture.png" alt="" />
+                <p>강습 신청하기</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 신청 콘텐츠 영역 종료 -->
+
+        <!-- 이벤트 콘텐츠 영역 시작 -->
+        <div id="eventContents">
+          <h2>이벤트</h2>
+          <img src="images/temp_picture.png" alt="" />
+        </div>
+        <!-- 이벤트 콘텐츠 영역 종료 -->
+
+        <!-- 다운로드 콘텐츠 영역 시작 -->
+        <div id="downloadContents">
+          <img src="images/banner_img.jpg" alt="banner_img" />
+          <img src="images/banner_android.png" alt="banner_android" />
+          <img src="images/banner_ios.png" alt="banner_ios" />
+        </div>
+        <!-- 다운로드 콘텐츠 영역 종료 -->
+
+        <!-- 공지사항 콘텐츠 영역 시작 -->
+        <div id="noticeContents">
+          <h2>공지사항</h2>
+          <section class="notice">
+            <ul>
+              <li>
+                <a href="#">출석 이벤트 진행중</a>
+                <time datetime="2023-03-01">2023.03.01</time>
+              </li>
+              <li>
+                <a href="#">마스크 해제 공지</a>
+                <time datetime="2023-02-05">2023.02.05</time>
+              </li>
+              <li>
+                <a href="#">설연휴 기간연장</a>
+                <time datetime="2023-01-20">2023.01.20</time>
+              </li>
+              <li>
+                <a href="#">휴관 안내 공지</a>
+                <time datetime="2023-01-10">2023.01.10</time>
+              </li>
+
+              <li>
+                <a href="#">신년 이벤트 공지</a>
+                <time datetime="2023-01-01">2023.01.01</time>
+              </li>
+            </ul>
+          </section>
+          <section class="banner">
+            <div class="bannerContainer">
+              <div class="bannerImg">
+                <img src="images/banner1.png" alt="회원가입시 10% 할인" />
+              </div>
+              <div class="bannerImg">
+                <img src="images/banner2.png" alt="출석 이벤트 진행중" />
+              </div>
+              <div class="bannerImg">
+                <img src="images/banner3.png" alt="마스크 착용 권고" />
+              </div>
+            </div>
+            <div class="imgBtns">
+              <button class="imgBtn1">1</button>
+              <button class="imgBtn2">2</button>
+              <button class="imgBtn3">3</button>
+            </div>
+          </section>
+        </div>
+        <!-- 공지사항 콘텐츠 영역 종료 -->
+      </div>
       <!-- 콘텐츠 영역 종료 -->
 
       <!-- 푸터 영역 시작 -->

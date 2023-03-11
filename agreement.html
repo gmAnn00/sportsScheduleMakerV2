@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="images/running-shoes.png" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/agreement.css" />
   </head>
   <body>
     <!-- wrapper(전체 콘텐츠) 영역 시작-->
@@ -43,75 +43,38 @@
       </header>
       <!-- 헤더 영역 종료 -->
 
-      <!-- 로그인 영역 시작 -->
-      <div id="loginArea">
-        <h2>로그인</h2>
-        <div id="loginAPI">
-          <ul>
-            <li>
-              <a href="#" class="google">
-                <img
-                  src="images/btn_google_light_normal_xxxhdpi.9.png"
-                  alt=""
-                /><span>Google로 시작하기</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="naver">
-                <img src="images/btnG_아이콘사각.png" alt="" />
-                <span>네이버로 시작하기</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="kakao">
-                <img src="images/kakao_login_large_narrow_symbol.png" alt="" />
-                <span>카카오로 시작하기</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="lineOr">
-          <div class="line"></div>
-          <div class="or">또는</div>
-          <div class="line"></div>
-        </div>
-        <div id="loginFormArea">
-          <form
-            action="login.jsp"
-            method="post"
-            id="loginForm"
-            name="loginForm"
-          >
-            <legend>로그인 정보 입력 폼</legend>
-            <p>
-              <input
-                type="text"
-                id="id"
-                name="id"
-                required
-                placeholder="이메일"
-              />
-            </p>
-            <p>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                required
-                placeholder="비밀번호"
-              />
-            </p>
-            <div id="btnLoginArea">
-              <button type="submit" class="btnLogin">로그인</button>
-            </div>
-            <div id="joinAndFindArea">
-              <span><a href="agreement.html">회원가입</a></span>
-              <span><a href="#">아이디·비밀번호 찾기</a></span>
-            </div>
-          </form>
-        </div>
+      <!-- 약관 동의 영역 시작 -->
+      <div id="agreementArea">
+        <h2>약관 동의</h2>
+        <p class="allCheck">
+          <label for="">
+            <input type="checkbox" class="inputCheckAll" />
+            전체 동의
+          </label>
+        </p>
+        <p class="terms">
+          <input type="checkbox" class="checkboxNess" required />
+          <a href="#" target="_blank">이용약관 동의</a>
+          <span class="nessText">(필수)</span>
+        </p>
+        <p class="terms">
+          <input type="checkbox" class="checkboxNess" required />
+          <a href="#" target="_blank">만 14세 이상 확인</a>
+          <span class="nessText">(필수)</span>
+        </p>
+        <p class="terms">
+          <input type="checkbox" class="checkboxNess" required />
+          <a href="#" target="_blank">개인정보 수집 및 이용 동의</a>
+          <span class="nessText">(필수)</span>
+        </p>
+        <p class="terms">
+          <input type="checkbox" />
+          <a href="#" target="_blank">마케팅 알람 수신동의</a>
+          <span>(선택)</span>
+        </p>
+        <button id="btnAgreement" disabled><span>다음</span></button>
       </div>
-      <!-- 로그인 영역 종료 -->
+      <!-- 약관 동의 영역 종료 -->
 
       <!-- 푸터 영역 시작 -->
       <footer id="footer">
@@ -155,5 +118,6 @@
     <!-- wrapper(전체 콘텐츠) 영역 종료-->
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/agreement.js"></script>
   </body>
 </html>

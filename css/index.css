@@ -141,7 +141,7 @@
 /* 다운로드 콘텐츠 영역 시작 */
 #downloadContents {
   margin-top: 50px;
-  height: 480px;
+  height: 350px;
   /* background: url(images/banner_img.jpg); */
   /* opacity: 0.5; */
   /* position: relative; */
@@ -155,8 +155,14 @@
 #downloadContents > p {
   font-size: 1.5em;
   text-align: center;
-  margin-top: -280px;
+  margin-top: -230px;
   margin-bottom: 30px;
+}
+#downloadContents div a:first-of-type {
+  margin-right: 25px;
+}
+#downloadContents div a:last-of-type {
+  margin-left: 25px;
 }
 
 /* 공지사항 콘텐츠 영역 시작 */

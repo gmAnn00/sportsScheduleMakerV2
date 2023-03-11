@@ -1,0 +1,49 @@
+/* 공통부분 CSS */
+@charset "utf-8";
+
+/* 약관 동의 영역 시작 */
+#agreementArea {
+  width: 320px;
+  min-height: 400px;
+  margin: 50px auto;
+}
+#agreementArea h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#agreementContainer {
+  display: block;
+  width: 320px;
+}
+#agreementContainer p {
+  margin-bottom: 20px;
+}
+#agreementContainer p:first-of-type label {
+  cursor: pointer;
+}
+#agreementContainer input[type="checkbox"] {
+  zoom: 1.5;
+  cursor: pointer;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+#agreementContainer p a {
+  text-decoration: underline;
+  color: #666;
+}
+#agreementContainer p span.nessText {
+  color: red;
+}
+#btnAgreement {
+  width: 280px;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+  background: #8a2be2;
+  border-radius: 5px;
+  display: none;
+  cursor: pointer;
+}

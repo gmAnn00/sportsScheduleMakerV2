@@ -46,33 +46,40 @@
       <!-- 약관 동의 영역 시작 -->
       <div id="agreementArea">
         <h2>약관 동의</h2>
-        <p class="allCheck">
-          <label for="">
-            <input type="checkbox" class="inputCheckAll" />
-            전체 동의
-          </label>
-        </p>
-        <p class="terms">
-          <input type="checkbox" class="checkboxNess" required />
-          <a href="#" target="_blank">이용약관 동의</a>
-          <span class="nessText">(필수)</span>
-        </p>
-        <p class="terms">
-          <input type="checkbox" class="checkboxNess" required />
-          <a href="#" target="_blank">만 14세 이상 확인</a>
-          <span class="nessText">(필수)</span>
-        </p>
-        <p class="terms">
-          <input type="checkbox" class="checkboxNess" required />
-          <a href="#" target="_blank">개인정보 수집 및 이용 동의</a>
-          <span class="nessText">(필수)</span>
-        </p>
-        <p class="terms">
-          <input type="checkbox" />
-          <a href="#" target="_blank">마케팅 알람 수신동의</a>
-          <span>(선택)</span>
-        </p>
-        <button id="btnAgreement" disabled><span>다음</span></button>
+        <div id="agreementContainer">
+          <p class="allCheck">
+            <label for="checkboxAll">
+              <input
+                type="checkbox"
+                class="checkboxAll"
+                id="checkboxAll"
+                name="checkboxAll"
+              />
+              전체 동의
+            </label>
+          </p>
+          <p class="terms ness">
+            <input type="checkbox" class="checkboxNess normal" required />
+            <a href="#" target="_blank">이용약관 동의</a>
+            <span class="nessText">(필수)</span>
+          </p>
+          <p class="terms ness">
+            <input type="checkbox" class="checkboxNess normal" required />
+            <a href="#" target="_blank">만 14세 이상 확인</a>
+            <span class="nessText">(필수)</span>
+          </p>
+          <p class="terms ness">
+            <input type="checkbox" class="checkboxNess normal" required />
+            <a href="#" target="_blank">개인정보 수집 및 이용 동의</a>
+            <span class="nessText">(필수)</span>
+          </p>
+          <p class="terms option">
+            <input type="checkbox" class="normal" />
+            <a href="#" target="_blank">마케팅 알람 수신동의</a>
+            <span>(선택)</span>
+          </p>
+          <button id="btnAgreement"><span>다음</span></button>
+        </div>
       </div>
       <!-- 약관 동의 영역 종료 -->
 

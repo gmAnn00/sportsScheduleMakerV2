@@ -103,6 +103,7 @@
 
 #applicationContents ul li a {
   position: relative;
+  z-index: 5;
 }
 #applicationContents ul li img {
   width: 500px;

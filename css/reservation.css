@@ -87,7 +87,7 @@
 #calendarContents tbody td.selectDay.hasDay {
   /* border: 1px solid #ccc; */
   background: powderblue;
-  color: #000;
+  /* color: #000; */
 }
 #calendarContents .blue {
   color: blue;

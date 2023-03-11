@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Schedule Maker</title>
+    <link rel="shortcut icon" href="images/running-shoes.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <!-- wrapper(전체 콘텐츠) 영역 시작-->
+    <div id="wrapper">
+      <!-- 헤더 영역 시작 -->
+      <header id="header">
+        <!-- 로고 -->
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="images/logo_nobg.png" alt="logo" />
+          </a>
+        </h1>
+        <!-- 메인메뉴 -->
+        <nav>
+          <h2 class="hidden">메인메뉴</h2>
+          <ul class="mainMenu">
+            <li>
+              <a href="#">운동 소개</a>
+              <ul class="aboutSports">
+                <li><a href="#">복싱</a></li>
+                <li><a href="#">수영</a></li>
+                <li><a href="#">클라이밍</a></li>
+                <li><a href="#">필라테스</a></li>
+              </ul>
+            </li>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li class="liReserve"><a href="reservation.html">예약하기</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- 헤더 영역 종료 -->
+
+      <!-- 로그인 영역 시작 -->
+      <div id="loginArea">
+        <h2>로그인</h2>
+        <div id="loginAPI">
+          <ul>
+            <li>
+              <a href="#" class="google">
+                <img
+                  src="images/btn_google_light_normal_xxxhdpi.9.png"
+                  alt=""
+                /><span>Google로 시작하기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="naver">
+                <img src="images/btnG_아이콘사각.png" alt="" />
+                <span>네이버로 시작하기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="kakao">
+                <img src="images/kakao_login_large_narrow_symbol.png" alt="" />
+                <span>카카오로 시작하기</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="lineOr">
+          <div class="line"></div>
+          <div class="or">또는</div>
+          <div class="line"></div>
+        </div>
+        <div id="loginFormArea">
+          <form
+            action="login.jsp"
+            method="post"
+            id="loginForm"
+            name="loginForm"
+          >
+            <legend>로그인 정보 입력 폼</legend>
+            <p>
+              <input
+                type="text"
+                id="id"
+                name="id"
+                required
+                placeholder="이메일"
+              />
+            </p>
+            <p>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="비밀번호"
+              />
+            </p>
+            <div id="btnLoginArea">
+              <button type="submit" class="btnLogin">로그인</button>
+            </div>
+            <div id="joinAndFindArea">
+              <span><a href="join.html">회원가입</a></span>
+              <span><a href="#">아이디·비밀번호 찾기</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- 로그인 영역 종료 -->
+
+      <!-- 푸터 영역 시작 -->
+      <footer id="footer">
+        <div id="footerInner">
+          <section class="guide">
+            <h2 class="hidden">사이트 이용 안내</h2>
+            <div class="snsContainer">
+              <a href="#"><img src="images/youtube.png" alt="youtube" /></a>
+              <a href="#"><img src="images/instagram.png" alt="instagram" /></a>
+              <a href="#"><img src="images/facebook.png" alt="facebook" /></a>
+              <a href="#"><img src="images/twitter.png" alt="twitter" /></a>
+            </div>
+            <img src="images/logo_nobg.png" alt="logo" class="footerLogo" />
+            <ul class="guide">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">운영정책</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+          </section>
+          <address>
+            <span>서울시 종로구 관철동 미려빌딩 6층</span>
+            <span>전화: 02-1234-5678</span>
+            <span>
+              E-mail:
+              <a href="mailto:webmaster@sportsschedulemaker.com">
+                webmaster@sportsschedulemaker.com
+              </a>
+            </span>
+          </address>
+          <p class="copyright">
+            &copy; 2023 by
+            <strong>Sports Schedule Maker CORPORATION</strong> ALL RIGHTS
+            RESERVED.
+          </p>
+        </div>
+      </footer>
+      <!-- 푸터 영역 종료 -->
+    </div>
+    <!-- wrapper(전체 콘텐츠) 영역 종료-->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

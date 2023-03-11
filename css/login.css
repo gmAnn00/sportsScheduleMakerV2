@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* 로그인 영역 시작 */
+#loginArea {
+  width: 500px;
+  position: relative;
+  /* background: #ececec; */
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); */
+}
+#loginArea h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#loginAPI ul {
+  list-style: none;
+  text-align: center;
+}
+#loginAPI ul li {
+  margin-bottom: 10px;
+}
+#loginAPI ul li a {
+  padding: 5px 15px;
+  display: inline-block;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: bold;
+  position: relative;
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); */
+}
+#loginAPI a img {
+  position: relative;
+  top: 3px;
+}
+#loginAPI a span {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  top: -5px;
+}
+a.google {
+  color: #000;
+  background: #fff;
+}
+a.google img {
+  height: 30px;
+}
+a.google span {
+}
+a.naver {
+  color: #fff;
+  background: #03c75a;
+}
+a.naver img {
+  height: 30px;
+}
+a.kakao {
+  color: rgba(0, 0, 0, 0.85);
+  background: #fee500;
+}
+a.kakao img {
+  height: 30px;
+}
+
+.or {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#loginFormArea input {
+  width: 280px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#btnLoginArea {
+  width: 280px;
+  margin: 10px auto;
+  margin-bottom: 0;
+}
+#btnLoginArea button {
+  width: 280px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #8a2be2;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+#btnLoginArea button:active {
+  border: 1px solid #000;
+}
+#joinAndFindArea {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 10px;
+  overflow: hidden;
+}
+#joinAndFindArea span {
+  display: inline-block;
+}
+#joinAndFindArea > span:first-of-type {
+  float: left;
+}
+#joinAndFindArea > span:last-of-type {
+  float: right;
+}
+
+.lineOr {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.lineOr div {
+  display: inline-block;
+}
+.lineOr .or {
+  width: 50px;
+}
+.lineOr .line {
+  width: 180px;
+  height: 0px;
+  border-bottom: 1px solid #777;
+  position: relative;
+  top: 30px;
+}

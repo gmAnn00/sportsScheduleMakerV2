@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+/* 예약 영역 시작 */
+
+#reservationArea {
+  width: 1000px;
+  background: #ececec;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+#reservationArea h2 {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+#calendarContainer {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+#calendarContents {
+  width: 700px;
+}
+.calendarTable {
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  border: 1px solid #ccc;
+}
+.calDate {
+  height: 50px;
+  position: relative;
+}
+.calDate button {
+  display: inline-block;
+  padding: 10px 15px;
+  background: steelblue;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+.calDate button:active {
+  border: 1px solid #000;
+}
+.calDate .prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.calDate .next {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.calDate .today {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: lightgray;
+  color: #000;
+  position: absolute;
+  top: 5px;
+  left: 410px;
+}
+.calDate span {
+  display: inline-block;
+  font-size: 1.8em;
+}
+.calWeek {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+.calendarTable {
+  background: #fff;
+}
+.calendarTable td.hasDay {
+  text-align: center;
+  cursor: pointer;
+}
+.calendarTable td.hasDay:hover {
+  background: powderblue;
+}
+#calendarContents tbody td.selectDay.hasDay {
+  /* border: 1px solid #ccc; */
+  background: powderblue;
+  color: #000;
+}
+#calendarContents .blue {
+  color: blue;
+}
+#calendarContents .red {
+  color: red;
+}
+#reservationContents p {
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+#sports {
+  display: inline-block;
+  width: 240px;
+  height: 40px;
+  /* margin-top: 20px; */
+  margin-bottom: 30px;
+}
+.reserveTimes {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.reserveTimes label {
+  width: 80px;
+  text-align: center;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.reserveTimes input[type="radio"] {
+  display: none;
+}
+.reserveTimes input[type="radio"]:checked + label {
+  background: #333;
+  color: #fff;
+}
+#BtnReserveArea {
+  position: relative;
+}
+#BtnReserveArea button {
+  display: inline-block;
+  width: 280px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  background: #8a2be2;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -100px;
+  right: 30px;
+}
+#BtnReserveArea button:active {
+  border: 1px solid #000;
+}

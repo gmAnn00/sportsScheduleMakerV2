@@ -98,7 +98,7 @@
   display: inline-block;
 }
 #applicationContents ul li:first-of-type {
-  margin-right: 50px;
+  margin-right: 180px;
 }
 
 #applicationContents ul li a {
@@ -119,4 +119,105 @@
   top: -20px;
   right: 0;
   z-index: 10;
+}
+
+/* 이벤트 콘텐츠 영역 시작 */
+#eventContents {
+  margin-top: 50px;
+  /* padding: 20px; */
+}
+#eventContents h2 {
+  padding-left: 35px;
+  margin-bottom: 35px;
+}
+#eventContents img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 다운로드 콘텐츠 영역 시작 */
+#downloadContents {
+  margin-top: 50px;
+  height: 480px;
+  /* background: url(images/banner_img.jpg); */
+  /* opacity: 0.5; */
+  /* position: relative; */
+  text-align: center;
+  /* overflow: hidden; */
+}
+#downloadContents > img {
+  /* opacity: 0.5; */
+  width: 100%;
+}
+#downloadContents > p {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: -280px;
+  margin-bottom: 30px;
+}
+
+/* 공지사항 콘텐츠 영역 시작 */
+#noticeContents {
+  margin-top: 50px;
+}
+#noticeContents h2 {
+  padding-left: 35px;
+  margin-bottom: 30px;
+}
+#noticeContents > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.notice {
+  width: 400px;
+}
+.notice li {
+  margin-bottom: 10px;
+}
+.notice ul a {
+  display: inline-block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.notice ul a::before {
+  content: "·";
+  color: #666;
+  padding: 0 10px;
+}
+.notice time {
+  float: right;
+  color: #7a7a7a;
+  padding-right: 10px;
+}
+.banner {
+  width: 250px;
+  overflow: hidden;
+}
+.bannerContainer {
+  width: 750px;
+  height: 250px;
+  transition: all 0.5s;
+}
+.bannerImg {
+  width: 250px;
+  height: 250px;
+  float: left;
+}
+.banner img {
+  width: 250px;
+  height: 250px;
+}
+.imgBtns {
+  margin-left: 160px;
+}
+.imgBtns button {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 2px 5px;
 }

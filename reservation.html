@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Schedule Maker</title>
+    <link rel="shortcut icon" href="images/running-shoes.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/reservation.css" />
+  </head>
+  <body>
+    <!-- wrapper(전체 콘텐츠) 영역 시작-->
+    <div id="wrapper">
+      <!-- 헤더 영역 시작 -->
+      <header id="header">
+        <!-- 로고 -->
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="images/logo_nobg.png" alt="logo" />
+          </a>
+        </h1>
+        <!-- 메인메뉴 -->
+        <nav>
+          <h2 class="hidden">메인메뉴</h2>
+          <ul class="mainMenu">
+            <li>
+              <a href="#">운동 소개</a>
+              <ul class="aboutSports">
+                <li><a href="#">복싱</a></li>
+                <li><a href="#">수영</a></li>
+                <li><a href="#">클라이밍</a></li>
+                <li><a href="#">필라테스</a></li>
+              </ul>
+            </li>
+            <li><a href="#">이용 안내</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li class="liReserve"><a href="reservation.html">예약하기</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- 헤더 영역 종료 -->
+
+      <!-- 예약 영역 시작 -->
+      <div id="reservationArea">
+        <h2>예약하기</h2>
+        <div id="calendarContainer">
+          <div id="calendarContents"></div>
+          <div id="reservationContents">
+            <p>운동 선택</p>
+            <select name="sports" id="sports">
+              <option value="boxing">복싱</option>
+              <option value="swimming">수영</option>
+              <option value="climbing">클라이밍</option>
+              <option value="pilates">필라테스</option>
+            </select>
+            <p>시간 선택</p>
+            <form class="reserveTimes">
+              <input
+                type="radio"
+                id="reserveTime11"
+                name="reserveTime"
+                value="11"
+              />
+              <label for="reserveTime11">11:00</label>
+              <input
+                type="radio"
+                id="reserveTime14"
+                name="reserveTime"
+                value="14"
+              />
+              <label for="reserveTime14">14:00</label>
+              <input
+                type="radio"
+                id="reserveTime15"
+                name="reserveTime"
+                value="15"
+              />
+              <label for="reserveTime15">15:00</label>
+              <input
+                type="radio"
+                id="reserveTime16"
+                name="reserveTime"
+                value="16"
+              />
+              <label for="reserveTime16">16:00</label>
+              <input
+                type="radio"
+                id="reserveTime17"
+                name="reserveTime"
+                value="17"
+              />
+              <label for="reserveTime17">17:00</label>
+              <input
+                type="radio"
+                id="reserveTime19"
+                name="reserveTime"
+                value="19"
+              />
+              <label for="reserveTime19">19:00</label>
+            </form>
+          </div>
+        </div>
+        <div id="BtnReserveArea">
+          <button type="submit">예약하기</button>
+        </div>
+      </div>
+      <!-- 예약 영역 종료 -->
+
+      <!-- 푸터 영역 시작 -->
+      <footer id="footer">
+        <div id="footerInner">
+          <section class="guide">
+            <h2 class="hidden">사이트 이용 안내</h2>
+            <div class="snsContainer">
+              <a href="#"><img src="images/youtube.png" alt="youtube" /></a>
+              <a href="#"><img src="images/instagram.png" alt="instagram" /></a>
+              <a href="#"><img src="images/facebook.png" alt="facebook" /></a>
+              <a href="#"><img src="images/twitter.png" alt="twitter" /></a>
+            </div>
+            <img src="images/logo_nobg.png" alt="logo" class="footerLogo" />
+            <ul class="guide">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">운영정책</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">고객센터</a></li>
+            </ul>
+          </section>
+          <address>
+            <span>서울시 종로구 관철동 미려빌딩 6층</span>
+            <span>전화: 02-1234-5678</span>
+            <span>
+              E-mail:
+              <a href="mailto:webmaster@sportsschedulemaker.com">
+                webmaster@sportsschedulemaker.com
+              </a>
+            </span>
+          </address>
+          <p class="copyright">
+            &copy; 2023 by
+            <strong>Sports Schedule Maker CORPORATION</strong> ALL RIGHTS
+            RESERVED.
+          </p>
+        </div>
+      </footer>
+      <!-- 푸터 영역 종료 -->
+    </div>
+    <!-- wrapper(전체 콘텐츠) 영역 종료-->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/reservation.js"></script>
+  </body>
+</html>

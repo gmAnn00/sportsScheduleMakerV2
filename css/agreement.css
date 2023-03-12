@@ -48,3 +48,6 @@
   cursor: pointer;
   border: 1px solid #ccc;
 }
+#btnAreement:active {
+  border: 1px solid black;
+}

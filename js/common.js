@@ -26,7 +26,7 @@ function changeMenu() {
       $(".mainMenu > li > a").css("color", "#000");
       $(".mainMenu > li:last-child a").css("color", "#fff");
     } else {
-      $("#header").css("background", "#8a2be2");
+      $("#header").css("background", "#7b92d3");
       $("#header").css("border", "none");
       $(".mainMenu > li > a").css("color", "#fff");
     }

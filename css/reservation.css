@@ -43,10 +43,11 @@
 .calDate button {
   display: inline-block;
   padding: 10px 15px;
-  background: steelblue;
+  background: #7c7deb;
   color: #fff;
   border: 1px solid #ccc;
   border-radius: 30px;
+  font-weight: bold;
 }
 .calDate button:active {
   border: 1px solid #000;
@@ -136,7 +137,7 @@
   display: none;
 }
 .reserveTimes input[type="radio"]:checked + label {
-  background: #333;
+  background: #716985;
   color: #fff;
 }
 #BtnReserveArea {
@@ -149,7 +150,7 @@
   padding-bottom: 20px;
   margin-top: 30px;
   margin-bottom: 25px;
-  background: #8a2be2;
+  background: #7b92d3;
   color: #fff;
   font-weight: bold;
   border: 1px solid #ccc;

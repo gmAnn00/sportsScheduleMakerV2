@@ -201,6 +201,29 @@
   color: #7a7a7a;
   padding-right: 10px;
 }
+.review {
+  width: 400px;
+}
+.review li {
+  margin-bottom: 10px;
+}
+.review ul a {
+  display: inline-block;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review ul a::before {
+  content: "·";
+  color: #666;
+  padding: 0 10px;
+}
+.review time {
+  float: right;
+  color: #7a7a7a;
+  padding-right: 10px;
+}
 .banner {
   width: 250px;
   overflow: hidden;

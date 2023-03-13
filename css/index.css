@@ -250,6 +250,11 @@
   width: 250px;
   height: 250px;
 }
+.banner img:last-of-type {
+  width: 248px;
+  height: 248px;
+  border: 1px solid #3a4ca8;
+}
 .imgBtns {
   margin-left: 160px;
   position: relative;

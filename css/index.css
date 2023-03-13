@@ -264,11 +264,14 @@
   border-radius: 50%;
   margin-top: 10px;
   margin-bottom: 20px;
-  padding-left: 9px;
-  padding-right: 9px;
+  width: 18px;
+  height: 18px;
   text-indent: -999px;
   position: relative;
   top: -250px;
   right: -20px;
   background: rgba(0, 0, 0, 0.4);
+}
+.imgBtns button:active {
+  background: rgba(0, 0, 0, 0.6);
 }

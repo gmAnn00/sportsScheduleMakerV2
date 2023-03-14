@@ -47,45 +47,6 @@ function calendarMaker(target, date) {
   calMoveEvtFn();
 
   function assembly(year, month) {
-    /*
-      let calendarHTMLCode =
-        "<table class='calendarTable'>" +
-        "<thead class='calDate'>" +
-        "<th><button type='button' class='prev'>< 이전 달</button></th>" +
-        "<th colspan='5'><p><span>" +
-        year +
-        "</span>년 <span>" +
-        month +
-        "</span>월</p></th>" +
-        "<th><button type='button' class='next'>다음 달 ></button></th>" +
-        "</thead>" +
-        "<thead  class='calWeek'>" +
-        "<th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>" +
-        "</thead>" +
-        "<tbody id='setDate'>" +
-        "</tbody>" +
-        "</table>";
-        */
-    /*
-      let calendarHTMLCode =
-        "<table class='calendarTable'>" +
-        "<thead class='calDate'>" +
-        "<th><button type='button' class='prev'>< 이전 달</button></th>" +
-        "<th colspan='5'><p><span>" +
-        year +
-        "</span>년 <span>" +
-        month +
-        "</span>월</p></th>" +
-        "<th><button type='button' class='today'>오늘</button>" +
-        "<th><button type='button' class='next'>다음 달 ></button></th>" +
-        "</thead>" +
-        "<thead  class='calWeek'>" +
-        "<th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>" +
-        "</thead>" +
-        "<tbody id='setDate'>" +
-        "</tbody>" +
-        "</table>";
-        */
     let calendarHTMLCode =
       "<table class='calendarTable'>" +
       "<caption class='calDate'>" +
@@ -116,6 +77,7 @@ function calendarMaker(target, date) {
         nowDate.getDate()
       );
       calendarMaker($(target), nowDate);
+      passedDay(nowDate);
     });
 
     // 다음달 클릭
@@ -126,21 +88,25 @@ function calendarMaker(target, date) {
         nowDate.getDate()
       );
       calendarMaker($(target), nowDate);
+      passedDay(nowDate);
     });
 
     //일자 선택 클릭
     $(".calendarTable").on("click", "td", function () {
-      $("td.selectDay").removeClass("selectDay");
-      $(this).removeClass("selectDay").addClass("selectDay");
+      let cName = $(this).attr("class");
+      // console.log(cName);
+      let canSelect = cName.indexOf("passedDay");
+      if (canSelect == -1) {
+        $("td.selectDay").removeClass("selectDay");
+        $(this).removeClass("selectDay").addClass("selectDay");
+      }
     });
 
     // 오늘 클릭
     $(".calendarTable").on("click", ".today", function () {
       nowDate = new Date();
       calendarMaker($(target), nowDate);
-      // $("td:contains('" + nowDate.getDate() + "')")
-      //   .removeClass("selectDay")
-      //   .addClass("selectDay");
+      passedDay(nowDate);
       $("td")
         .filter(function () {
           return $(this).text() == nowDate.getDate();
@@ -170,4 +136,43 @@ function calendarMaker(target, date) {
       })
       .addClass("red");
   }
+
+  $("#btnReserveArea > button").click(function () {
+    reserve();
+  });
+
+  function reserve() {
+    let reserveList = [];
+    let sports = $("#sports option:selected").val();
+    let time = $("#reservationContents input[name=reserveTime]:checked").val();
+    let date = $("td.selectDay").text();
+    // console.log(sports, time, date);
+    if (time == undefined || date == undefined) {
+      alert("예약 날짜/시간을 선택해 주세요.");
+    } else {
+      let newReserve = {
+        sports: sports,
+        time: time,
+        date: date,
+      };
+      reserveList.push(newReserve);
+      console.log(reserveList);
+    }
+  }
+
+  // 오늘 이전은 선택/호버 안되게 함
+  function passedDay(date) {
+    let today = new Date();
+    if (date.getMonth() == today.getMonth()) {
+      $("td")
+        .filter(function () {
+          return parseInt($(this).text()) < parseInt(today.getDate());
+        })
+        .addClass("passedDay");
+    } else if (date < today) {
+      $("td").addClass("passedDay");
+    }
+  }
+
+  passedDay(nowDate);
 }

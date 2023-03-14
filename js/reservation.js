@@ -152,11 +152,20 @@ function calendarMaker(target, date) {
     } else {
       let newReserve = {
         sports: sports,
-        time: time,
         date: date,
+        time: time,
       };
+      let recordStr =
+        newReserve.sports +
+        "<br/><span>날짜: " +
+        newReserve.date +
+        "</span><br/><span>시간: " +
+        newReserve.time +
+        "시</span>";
       reserveList.push(newReserve);
       console.log(reserveList);
+      $("div.reservedRecord").append(recordStr);
+      $("td.selectDay").append("<div class='displayReserve'></div>");
     }
   }
 

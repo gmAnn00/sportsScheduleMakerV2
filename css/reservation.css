@@ -36,6 +36,10 @@
   /* border-style: hidden; */
   /* border-radius: 5px; */
 }
+.calendarTable td {
+  width: 80px;
+  height: 75px;
+}
 .calDate {
   height: 50px;
   position: relative;
@@ -85,7 +89,7 @@
 #calendarContents td.passedDay.hasDay {
   background: #aaa;
   cursor: default;
-  color: #ccc;
+  color: #fff;
   border: 1px solid #fff;
 }
 .calendarTable td.hasDay {
@@ -169,4 +173,13 @@
 }
 #btnReserveArea button:active {
   border: 1px solid #000;
+}
+div.displayReserve {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: rgb(150, 126, 92);
+  display: block;
+  margin: 0 auto;
 }

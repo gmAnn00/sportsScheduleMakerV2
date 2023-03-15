@@ -1,4 +1,11 @@
 // https://myhappyman.tistory.com/145
+
+let reserveList = [];
+let sports;
+let yearAndMonth;
+let date;
+let time;
+
 (function () {
   calendarMaker($("#calendarContents"), new Date());
 })();
@@ -78,6 +85,7 @@ function calendarMaker(target, date) {
       );
       calendarMaker($(target), nowDate);
       passedDay(nowDate);
+      showDisplayReserve();
     });
 
     // 다음달 클릭
@@ -89,6 +97,7 @@ function calendarMaker(target, date) {
       );
       calendarMaker($(target), nowDate);
       passedDay(nowDate);
+      showDisplayReserve();
     });
 
     //일자 선택 클릭
@@ -107,6 +116,7 @@ function calendarMaker(target, date) {
       nowDate = new Date();
       calendarMaker($(target), nowDate);
       passedDay(nowDate);
+      showDisplayReserve();
       $("td")
         .filter(function () {
           return $(this).text() == nowDate.getDate();
@@ -137,37 +147,27 @@ function calendarMaker(target, date) {
       .addClass("red");
   }
 
-  $("#btnReserveArea > button").click(function () {
-    reserve();
-  });
+  $("td").click(function () {
+    $(".reservedRecord").text("");
+    for (let i in reserveList) {
+      if (
+        $(this).text() == reserveList[i].date &&
+        $("caption.calDate span").text() == reserveList[i].yearAndMonth
+      ) {
+        let recordStr =
+          reserveList[i].sports +
+          "<br/><span>날짜: " +
+          reserveList[i].yearAndMonth +
+          " " +
+          reserveList[i].date +
+          "일</span><br/><span>시간: " +
+          reserveList[i].time +
+          "시</span><br/><br/>";
 
-  function reserve() {
-    let reserveList = [];
-    let sports = $("#sports option:selected").val();
-    let time = $("#reservationContents input[name=reserveTime]:checked").val();
-    let date = $("td.selectDay").text();
-    // console.log(sports, time, date);
-    if (time == undefined || date == undefined) {
-      alert("예약 날짜/시간을 선택해 주세요.");
-    } else {
-      let newReserve = {
-        sports: sports,
-        date: date,
-        time: time,
-      };
-      let recordStr =
-        newReserve.sports +
-        "<br/><span>날짜: " +
-        newReserve.date +
-        "</span><br/><span>시간: " +
-        newReserve.time +
-        "시</span>";
-      reserveList.push(newReserve);
-      console.log(reserveList);
-      $("div.reservedRecord").append(recordStr);
-      $("td.selectDay").append("<div class='displayReserve'></div>");
+        $(".reservedRecord").html(recordStr);
+      }
     }
-  }
+  });
 
   // 오늘 이전은 선택/호버 안되게 함
   function passedDay(date) {
@@ -184,4 +184,59 @@ function calendarMaker(target, date) {
   }
 
   passedDay(nowDate);
+
+  function showDisplayReserve() {
+    $(".reservedRecord").text("");
+    $("td").each(function () {
+      for (let i in reserveList) {
+        if (
+          $(this).text() == reserveList[i].date &&
+          $("caption.calDate span").text() == reserveList[i].yearAndMonth
+        ) {
+          $("td")
+            .filter(function () {
+              return $(this).text() == reserveList[i].date;
+            })
+            .append("<div class='displayReserve'></div>");
+        }
+      }
+    });
+  }
+}
+
+$("#btnReserveArea > button").click(function () {
+  reserve();
+});
+
+function reserve() {
+  console.log("reserve 호출");
+  sports = $("#sports option:selected").val();
+  yearAndMonth = $("caption.calDate span").text();
+  date = $("td.selectDay").text();
+  time = $("#reservationContents input[name=reserveTime]:checked").val();
+
+  // console.log(sports, time, date);
+  if (time == undefined || date == undefined) {
+    alert("예약 날짜/시간을 선택해 주세요.");
+  } else {
+    let newReserve = {
+      sports: sports,
+      yearAndMonth: yearAndMonth,
+      date: date,
+      time: time,
+    };
+    let recordStr =
+      newReserve.sports +
+      "<br/><span>날짜: " +
+      newReserve.yearAndMonth +
+      " " +
+      newReserve.date +
+      "일</span><br/><span>시간: " +
+      newReserve.time +
+      "시</span><br/><br/>";
+    reserveList.push(newReserve);
+    // console.log(reserveList);
+    $("div.reservedRecord").append(recordStr);
+    $("td.selectDay").append("<div class='displayReserve'></div>");
+  }
 }

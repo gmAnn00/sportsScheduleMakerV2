@@ -151,6 +151,14 @@
   background: #716985;
   color: #fff;
 }
+.reservedRecord {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  overflow-y: scroll;
+}
 #btnReserveArea {
   position: relative;
 }

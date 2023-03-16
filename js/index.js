@@ -1,11 +1,18 @@
-document.querySelector(".imgBtn1").addEventListener("click", function () {
-  document.querySelector(".bannerContainer").style.transform = "translate(0px)";
+let index;
+$("div.imgBtns > button").click(function () {
+  index = $(this).index();
+  // console.log(index);
+  moveSlider(index);
+
+  $("div.imgBtns > button").removeClass("active");
+  $("div.imgBtns > button").eq(index).addClass("active");
 });
-document.querySelector(".imgBtn2").addEventListener("click", function () {
-  document.querySelector(".bannerContainer").style.transform =
-    "translate(-250px)";
-});
-document.querySelector(".imgBtn3").addEventListener("click", function () {
-  document.querySelector(".bannerContainer").style.transform =
-    "translate(-500px)";
-});
+function moveSlider(index) {
+  // console.log(index);
+  $("div.bannerContainer").animate(
+    {
+      left: -(250 * index),
+    },
+    "fast"
+  );
+}

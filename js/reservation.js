@@ -6,10 +6,10 @@ let yearAndMonth;
 let date;
 let time;
 
-(function () {
-  calendarMaker($("#calendarContents"), new Date());
-})();
-
+// (function () {
+//   calendarMaker($("#calendarContents"), new Date());
+// })();
+calendarMaker($("#calendarContents"), new Date());
 let nowDate = new Date();
 
 function calendarMaker(target, date) {

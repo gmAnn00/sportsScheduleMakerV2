@@ -257,10 +257,12 @@
   padding-right: 10px;
 }
 .banner {
+  position: relative;
   width: 250px;
   overflow: hidden;
 }
 .bannerContainer {
+  position: relative;
   width: 750px;
   height: 250px;
   transition: all 0.5s;
@@ -296,6 +298,9 @@
   right: -20px;
   background: rgba(0, 0, 0, 0.4);
 }
-.imgBtns button:active {
+.imgBtns button:hover {
   background: rgba(0, 0, 0, 0.6);
+}
+.imgBtns button.active {
+  background: rgba(255, 255, 0, 0.5);
 }

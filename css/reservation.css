@@ -187,7 +187,10 @@ div.displayReserve {
   height: 10px;
   border: 1px solid #ccc;
   border-radius: 50%;
-  background: rgb(150, 126, 92);
-  display: block;
+  background: #7c7deb;
+  display: inline-block;
   margin: 0 auto;
+}
+div.displayReserveContainer {
+  display: block;
 }

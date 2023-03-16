@@ -43,7 +43,7 @@ function calendarMaker(target, date) {
     if (cnt % 7 == 0) {
       tag += "<tr>";
     }
-    tag += "<td>" + i + "</td>";
+    tag += "<td>" + i + "<div class='displayReserveContainer'></div></td>";
     cnt++;
     if (cnt % 7 == 0) {
       tag += "</tr>";
@@ -85,6 +85,7 @@ function calendarMaker(target, date) {
       );
       calendarMaker($(target), nowDate);
       passedDay(nowDate);
+      $(".reservedRecord").text("");
       showDisplayReserve();
     });
 
@@ -97,6 +98,7 @@ function calendarMaker(target, date) {
       );
       calendarMaker($(target), nowDate);
       passedDay(nowDate);
+      $(".reservedRecord").text("");
       showDisplayReserve();
     });
 
@@ -109,6 +111,9 @@ function calendarMaker(target, date) {
         $("td.selectDay").removeClass("selectDay");
         $(this).removeClass("selectDay").addClass("selectDay");
       }
+
+      showRecord();
+      showDisplayReserve();
     });
 
     // 오늘 클릭
@@ -116,13 +121,15 @@ function calendarMaker(target, date) {
       nowDate = new Date();
       calendarMaker($(target), nowDate);
       passedDay(nowDate);
-      showDisplayReserve();
       $("td")
         .filter(function () {
           return $(this).text() == nowDate.getDate();
         })
         .removeClass("selectDay")
         .addClass("selectDay");
+
+      showRecord();
+      showDisplayReserve();
     });
 
     // 빈칸 선택 안함
@@ -147,28 +154,6 @@ function calendarMaker(target, date) {
       .addClass("red");
   }
 
-  $("td").click(function () {
-    $(".reservedRecord").text("");
-    for (let i in reserveList) {
-      if (
-        $(this).text() == reserveList[i].date &&
-        $("caption.calDate span").text() == reserveList[i].yearAndMonth
-      ) {
-        let recordStr =
-          reserveList[i].sports +
-          "<br/><span>날짜: " +
-          reserveList[i].yearAndMonth +
-          " " +
-          reserveList[i].date +
-          "일</span><br/><span>시간: " +
-          reserveList[i].time +
-          "시</span><br/><br/>";
-
-        $(".reservedRecord").html(recordStr);
-      }
-    }
-  });
-
   // 오늘 이전은 선택/호버 안되게 함
   function passedDay(date) {
     let today = new Date();
@@ -185,8 +170,36 @@ function calendarMaker(target, date) {
 
   passedDay(nowDate);
 
-  function showDisplayReserve() {
+  // 예약 기록 보여줌
+  function showRecord() {
     $(".reservedRecord").text("");
+
+    for (let i in reserveList) {
+      if (
+        $("td.selectDay").text() == reserveList[i].date &&
+        $("caption.calDate span").text() == reserveList[i].yearAndMonth
+      ) {
+        let recordStr =
+          reserveList[i].sports +
+          "<br/><span>날짜: " +
+          reserveList[i].yearAndMonth +
+          " " +
+          reserveList[i].date +
+          "일</span><br/><span>시간: " +
+          reserveList[i].time +
+          "시</span><br/><br/>";
+
+        $(".reservedRecord").html(function (index, html) {
+          return html + recordStr;
+        });
+      }
+    }
+  }
+
+  // 예약 동그라미 보여줌
+  function showDisplayReserve() {
+    // $(".reservedRecord").text("");
+    $("div.displayReserveContainer").empty();
     $("td").each(function () {
       for (let i in reserveList) {
         if (
@@ -197,6 +210,7 @@ function calendarMaker(target, date) {
             .filter(function () {
               return $(this).text() == reserveList[i].date;
             })
+            .find(".displayReserveContainer")
             .append("<div class='displayReserve'></div>");
         }
       }
@@ -237,6 +251,8 @@ function reserve() {
     reserveList.push(newReserve);
     // console.log(reserveList);
     $("div.reservedRecord").append(recordStr);
-    $("td.selectDay").append("<div class='displayReserve'></div>");
+    $("td.selectDay .displayReserveContainer").append(
+      "<div class='displayReserve'></div>"
+    );
   }
 }

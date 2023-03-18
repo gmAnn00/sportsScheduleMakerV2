@@ -118,6 +118,9 @@ body {
   top: 30px;
   /*left: 10px;*/
 }
+/* .mainMenu > li:hover > a {
+  color: #000;
+} */
 .mainMenu > li:last-child {
   background: #000;
   /*width: 100px;*/
@@ -136,16 +139,13 @@ body {
   display: inline-block;
 }
 /* 메인 메뉴의 하위 메뉴 */
-.mainMenu li:hover ul {
-  display: block;
-  background: #fff;
-}
 .mainMenu ul {
   display: none;
   position: absolute;
   left: -10px;
   z-index: 15;
   border-radius: 10px;
+  background: #fff;
 }
 .mainMenu ul li {
   width: 150px;
@@ -165,9 +165,9 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
-.mainMenu ul li a:hover {
+/* .mainMenu ul li a:hover {
   color: #7b92d3;
-}
+} */
 /* 헤더 영역 종료 */
 
 /* 메인 콘텐츠 영역 시작 */

@@ -6,6 +6,7 @@
 #visualContents {
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
+  height: 500px;
 }
 #visualContents img {
   width: 1000px;
@@ -17,6 +18,7 @@
   font-weight: bold;
   color: #000;
   text-align: right;
+  display: none;
 }
 /* 스포츠 콘텐츠 영역 시작 */
 #sportsContainer {

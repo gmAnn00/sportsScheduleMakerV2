@@ -7,11 +7,13 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
   height: 500px;
+  text-align: center;
 }
 #visualContents img {
   width: 1000px;
   display: block;
   margin: 0 auto;
+  /* left: -400px; */
 }
 #visualContents p {
   font-size: 1.5em;
@@ -23,18 +25,20 @@
 /* 스포츠 콘텐츠 영역 시작 */
 #sportsContainer {
   width: 1200px;
+  height: 290px;
   display: flex;
   flex-direction: row;
 }
 #sportsContainer div.visualImg {
   margin: 0;
   padding: 20px 0;
-  display: inline-block;
+  /* display: inline-block; */
   width: 25%;
   position: relative;
   height: 250px;
   text-align: center;
   cursor: pointer;
+  display: none;
 }
 .boxing img:first-child {
   width: 200px;

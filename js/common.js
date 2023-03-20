@@ -56,7 +56,7 @@ function setMenuWidth() {
   $("#footer").css("width", wrapWidth);
   $(window).resize(function (event) {
     windowWidth = $(window).width();
-    console.log("windowWidth:", windowWidth);
+    // console.log("windowWidth:", windowWidth);
     $("#header").css("width", windowWidth);
     // $("#footer").css("width", window);
   });

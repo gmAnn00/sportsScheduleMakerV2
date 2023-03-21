@@ -50,9 +50,7 @@ $("#sportsContainer div.boxing").hover(
   function () {
     // console.log("hover");
     moveboxing();
-    boxing = setInterval(function () {
-      moveboxing();
-    }, 3300);
+    boxing = setInterval(moveboxing, 3300);
   },
   function () {
     // console.log("over");
@@ -102,6 +100,7 @@ let swimming;
 $("#sportsContainer div.swimming").hover(
   function () {
     moveswimming();
+    swimming = setInterval(moveswimming, 1400);
   },
   function () {
     clearInterval(swimming);
@@ -124,7 +123,7 @@ function moveswimming() {
       },
       "slow",
       function () {
-        $("div.swimming").children("img").last().addClass("animate");
+        $("div.swimming").children("img").last().addClass("swimmingAni");
       }
     );
 
@@ -138,7 +137,64 @@ function moveswimming() {
       },
       "slow",
       function () {
-        $("div.swimming").children("img").last().removeClass("animate");
+        $("div.swimming").children("img").last().removeClass("swimmingAni");
       }
     );
 }
+
+// 클라이밍 애니메이션
+let climbing;
+$("div.climbing").hover(
+  function () {
+    moveclimbing();
+    climbing = setInterval(moveclimbing, 4000);
+  },
+  function () {
+    clearInterval(climbing);
+    $("div.climbing").children("img").eq(1).removeClass("climbingAni");
+    $("div.climbing").children("img").eq(1).css({
+      display: "inline-block",
+      left: 85,
+      top: 130,
+    });
+  }
+);
+
+function moveclimbing() {
+  $("div.climbing").children("img").eq(1).show();
+  $("div.climbing").children("img").eq(1).removeClass("climbingAni");
+  $("div.climbing").children("img").eq(1).css({
+    left: 85,
+    top: 130,
+  });
+
+  $("div.climbing")
+    .children("img")
+    .eq(1)
+    .animate(
+      {
+        left: 110,
+        top: 25,
+      },
+      1000,
+      function () {
+        $("div.climbing").children("img").eq(1).addClass("climbingAni");
+        $("div.climbing").children("img").eq(1).fadeOut(500);
+        $("div.climbing").children("img").eq(2).fadeIn(500);
+        $("div.climbing").children("img").eq(2).delay(1000).fadeOut(500);
+      }
+    );
+}
+
+// 필라테스 애니메이션
+let pilates;
+$("div.pilates")
+  .children("img")
+  .hover(
+    function () {
+      $("div.pilates").children("img").first().addClass("pilatesAni");
+    },
+    function () {
+      $("div.pilates").children("img").first().removeClass("pilatesAni");
+    }
+  );

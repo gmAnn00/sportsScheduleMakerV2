@@ -92,17 +92,21 @@
   width: 200px;
   height: 200px;
 }
-.pilates img:first {
+.pilates img:first-of-type {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40px;
+  left: 30px;
   z-index: 10;
 }
 .pilates img:last-of-type {
   position: absolute;
-  top: 20px;
+  top: 40px;
   left: 50px;
   z-index: 1;
+}
+.pilates p {
+  position: relative;
+  top: 205px;
 }
 .pilates img.pilatesAni {
   transform-origin: 120px 170px;

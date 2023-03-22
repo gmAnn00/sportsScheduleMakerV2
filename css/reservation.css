@@ -87,7 +87,7 @@
   background: #fff;
 }
 #calendarContents td.passedDay.hasDay {
-  background: #aaa;
+  background: #bbb;
   cursor: default;
   color: #fff;
   border: 1px solid #fff;

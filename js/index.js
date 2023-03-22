@@ -198,3 +198,25 @@ $("div.pilates")
       $("div.pilates").children("img").first().removeClass("pilatesAni");
     }
   );
+
+// 자동 넘김 이미지 슬라이더
+$("#eventPanel").prepend($("img.eventImg").eq(-1).clone());
+
+let eventIndex = 1;
+eventMoveSlider(eventIndex);
+setInterval(function () {
+  eventIndex++;
+  if (eventIndex < 4) {
+    eventMoveSlider(eventIndex);
+  } else {
+    $("#eventPanel").css("left", 0);
+    eventIndex = 1;
+    eventMoveSlider(eventIndex);
+  }
+}, 4000);
+
+function eventMoveSlider(index) {
+  $("#eventPanel").animate({
+    left: -(index * 1200),
+  });
+}

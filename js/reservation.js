@@ -157,7 +157,10 @@ function calendarMaker(target, date) {
   // 오늘 이전은 선택/호버 안되게 함
   function passedDay(date) {
     let today = new Date();
-    if (date.getMonth() == today.getMonth()) {
+    if (
+      date.getFullYear() == today.getFullYear() &&
+      date.getMonth() == today.getMonth()
+    ) {
       $("td")
         .filter(function () {
           return parseInt($(this).text()) < parseInt(today.getDate());

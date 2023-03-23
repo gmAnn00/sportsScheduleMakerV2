@@ -8,12 +8,14 @@
   padding-bottom: 20px;
   height: 500px;
   text-align: center;
+  position: relative;
 }
 #visualContents img {
   width: 1000px;
   display: block;
   margin: 0 auto;
-  /* left: -400px; */
+  position: relative;
+  left: -400px;
 }
 #visualContents p {
   font-size: 1.5em;
@@ -96,7 +98,7 @@
   position: absolute;
   top: 40px;
   left: 30px;
-  z-index: 10;
+  z-index: 5;
 }
 .pilates img:last-of-type {
   position: absolute;

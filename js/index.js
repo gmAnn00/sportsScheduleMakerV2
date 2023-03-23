@@ -2,6 +2,9 @@
 // $("#visualContents > img").delay(500).animate({
 //   left: 200,
 // });
+$("#visualContents > img").animate({
+  left: 0,
+});
 $("#visualContents > p").first().delay(500).slideDown("slow");
 $("#visualContents > p").last().delay(1000).slideDown("slow");
 

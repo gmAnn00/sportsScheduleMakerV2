@@ -3,6 +3,7 @@
 /* 로그인 영역 시작 */
 #loginArea {
   width: 500px;
+  min-height: 485px;
   position: relative;
   /* background: #ececec; */
   margin: 0 auto;

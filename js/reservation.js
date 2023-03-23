@@ -226,16 +226,17 @@ $("#btnReserveArea > button").click(function () {
 });
 
 function reserve() {
-  console.log("reserve 호출");
+  // console.log("reserve 호출");
   sports = $("#sports option:selected").val();
   yearAndMonth = $("caption.calDate span").text();
   date = $("td.selectDay").text();
   time = $("#reservationContents input[name=reserveTime]:checked").val();
 
   // console.log(sports, time, date);
-  if (time == undefined || date == undefined) {
+  if (time == undefined || date == undefined || date == "") {
     alert("예약 날짜/시간을 선택해 주세요.");
   } else {
+    // console.log(date);
     let newReserve = {
       sports: sports,
       yearAndMonth: yearAndMonth,

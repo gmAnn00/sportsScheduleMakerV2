@@ -129,6 +129,7 @@ body {
   top: 22px;
   right: 50px;
   text-align: center;
+  cursor: pointer;
 }
 .mainMenu > li > a {
   color: #fff;

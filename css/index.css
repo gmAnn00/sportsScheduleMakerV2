@@ -42,6 +42,9 @@
   cursor: pointer;
   display: none;
 }
+#sportsContainer div.visualImg:hover p {
+  color: #7b92d3;
+}
 .boxing img:first-child {
   width: 200px;
   height: 200px;
@@ -85,9 +88,6 @@
   left: 110px;
   top: 10px;
   display: none;
-}
-.climbing img.climbingAni {
-  transform: scaleX(-1);
 }
 .pilates img {
   position: relative;

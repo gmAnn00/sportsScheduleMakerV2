@@ -40,6 +40,9 @@
 #agreementContainer p span.nessText {
   color: red;
 }
+div.btnAgreementArea {
+  padding-left: 30px;
+}
 #btnAgreement {
   width: 280px;
   margin-top: 40px;

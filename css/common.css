@@ -143,8 +143,9 @@ body {
 .mainMenu ul {
   display: none;
   position: absolute;
-  left: -10px;
+  left: -15px;
   z-index: 15;
+  border: 1px solid #ccc;
   border-radius: 10px;
   background: #fff;
 }

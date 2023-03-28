@@ -169,15 +169,18 @@
 #applicationContents a > p {
   display: inline-block;
   padding: 10px 15px;
-  width: 200px;
+  width: 300px;
   color: #000;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   border-radius: 5px;
   position: absolute;
   top: 250px;
-  right: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
+  letter-spacing: 3px;
+  font-size: 1.1em;
 }
 #applicationContents .caption {
   width: 500px;
@@ -194,15 +197,25 @@
   opacity: 1;
 }
 #applicationContents .caption p {
-  font-size: 1.1em;
-  line-height: 80px;
-}
-#applicationContents .caption p > span {
-  color: rgb(223, 83, 83);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 1.4em;
   font-weight: bold;
 }
-
+#applicationContents .caption01 p:first-child {
+  padding-top: 30px;
+}
+#applicationContents .caption01 p {
+  line-height: 50px;
+}
+#applicationContents .caption p span {
+  color: #ffd400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+#applicationContents .caption02 p:first-child {
+  padding-top: 50px;
+}
+#applicationContents .caption02 p {
+  line-height: 50px;
+}
 /* 이벤트 콘텐츠 영역 시작 */
 #eventContents {
   margin-top: 70px;

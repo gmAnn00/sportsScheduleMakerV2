@@ -9,28 +9,33 @@
 }
 #agreementArea h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 #agreementContainer {
   display: block;
   width: 320px;
+  height: auto;
 }
 #agreementContainer p {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  padding-left: 30px;
 }
 #agreementContainer p:first-of-type label {
   cursor: pointer;
 }
 #agreementContainer input[type="checkbox"] {
-  zoom: 1.5;
+  transform: scale(1.5);
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 15px;
   position: relative;
   top: 3px;
 }
 #agreementContainer p a {
   text-decoration: underline;
   color: #666;
+}
+#agreementContainer p.allCheck label {
+  font-weight: bold;
 }
 #agreementContainer p span.nessText {
   color: red;

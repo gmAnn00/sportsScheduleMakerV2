@@ -186,25 +186,28 @@ body {
 }
 #footerInner {
   position: relative;
+  height: 200px;
 }
 .guide {
   text-align: center;
 }
-.guide .snsContainer {
-  text-align: right;
+.snsContainer {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
 }
-.guide .snsContainer a {
+.snsContainer a {
   display: inline-block;
   margin-left: 20px;
 }
-.guide .snsContainer img {
+.snsContainer img {
   width: 50px;
   height: 50px;
 }
 .footerLogo {
   position: absolute;
   left: -10px;
-  top: 75px;
+  top: 50px;
   width: 250px;
   height: 100px;
 }
@@ -222,7 +225,7 @@ address {
   margin-bottom: 5px;
   position: absolute;
   left: 260px;
-  top: 120px;
+  top: 80px;
 }
 address span {
   display: block;
@@ -235,5 +238,5 @@ address span::before {
 #footerInner p {
   position: absolute;
   left: 260px;
-  top: 190px;
+  top: 155px;
 }

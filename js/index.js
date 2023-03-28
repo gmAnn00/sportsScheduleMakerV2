@@ -204,6 +204,11 @@ function moveclimbing(obj) {
       targetclimbing.fadeOut(200);
       targetend.fadeIn(500);
       targetend.delay(1000).fadeOut(500);
+      // targetclimbing.css({
+      //   left: 85,
+      //   top: 130,
+      // });
+      // targetclimbing.delay(2000).show();
     }
   );
 }

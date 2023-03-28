@@ -119,7 +119,7 @@ $("div.swimming").hover(
       }
       moveswimming($("div.swimming"));
       setTimeout(moveswimmingRecursion, 1400);
-    });
+    }, 1400);
   },
   function () {
     clearTimeout(swimming);
@@ -132,7 +132,6 @@ $("div.swimming").hover(
     });
   }
 );
-// ddfsdf
 function moveswimming(obj) {
   let target = obj.children("img").last();
   target.animate(
@@ -160,48 +159,53 @@ function moveswimming(obj) {
 
 // 클라이밍 애니메이션
 let climbing;
+let climbingPlaying = false;
 $("div.climbing").hover(
   function () {
-    moveclimbing();
+    climbingPlaying = true;
+    moveclimbing($("div.climbing"));
     climbing = setTimeout(function moveclimbingRecursion() {
-      moveclimbing();
-    });
+      if (!climbingPlaying) {
+        return;
+      }
+      moveclimbing($("div.climbing"));
+      setTimeout(moveclimbingRecursion, 3000);
+    }, 3000);
   },
   function () {
-    clearInterval(climbing);
-    $("div.climbing").children("img").eq(1).css({
+    climbingPlaying = false;
+    clearTimeout(climbing);
+    let target = $("div.climbing").children("img").eq(1);
+    target.css({
       display: "inline-block",
       left: 85,
       top: 130,
     });
-    $("div.climbing").children("img").eq(1).show();
+    target.show();
   }
 );
 
-function moveclimbing() {
-  $("div.climbing").children("img").eq(1).show();
-  $("div.climbing").children("img").eq(1).css({
+function moveclimbing(obj) {
+  let targetclimbing = obj.children("img").eq(1);
+  let targetend = obj.children("img").eq(2);
+  targetclimbing.show();
+  targetclimbing.css({
     left: 85,
     top: 130,
   });
 
-  $("div.climbing")
-    .children("img")
-    .eq(1)
-    .animate(
-      {
-        left: 110,
-        top: 25,
-      },
-      1000,
-      function () {
-        $("div.climbing").children("img").eq(1).addClass("climbingAni");
-        $("div.climbing").children("img").eq(1).fadeOut(500);
-        $("div.climbing").children("img").eq(2).fadeIn(500);
-        $("div.climbing").children("img").eq(2).delay(1000).fadeOut(500);
-        $("div.climbing").children("img").eq(1).show();
-      }
-    );
+  targetclimbing.animate(
+    {
+      left: 110,
+      top: 25,
+    },
+    1000,
+    function () {
+      targetclimbing.fadeOut(200);
+      targetend.fadeIn(500);
+      targetend.delay(1000).fadeOut(500);
+    }
+  );
 }
 
 // 필라테스 애니메이션

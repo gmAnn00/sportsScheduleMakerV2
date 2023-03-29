@@ -7,7 +7,9 @@ $(".mainMenu > li")
   .not(".liReserve")
   .hover(
     function () {
-      $(this).find("ul").slideDown("fast");
+      $(this).find("ul").stop().slideDown("fast");
+      // $(this).find("ul").slideDown("fast");
+
       if (menuColor) {
         $(this).children("a").css({
           color: "#7b92d3",

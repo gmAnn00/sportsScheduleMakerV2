@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Schedule Make Mobile</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #fff;
+      }
+      a {
+        text-decoration: none;
+      }
+      nav a:link,
+      a:visited {
+        color: #fff;
+      }
+      /* active : 선택했을 때 */
+      nav a:active {
+        color: #7b92d3;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+      p {
+        font-size: 1.3em;
+        line-height: 2.5;
+      }
+      li {
+        font-size: 1em;
+        line-height: 2;
+      }
+      #content {
+        width: 100%;
+      }
+      header {
+        width: 100%;
+        height: 300px;
+        background: url(images/banner_img_50_slice.jpg) no-repeat center;
+        background-size: cover;
+      }
+      nav {
+        height: 50px;
+        background-color: #000;
+      }
+      #main_nav {
+        list-style: none;
+        padding: 10px;
+      }
+      #main_nav li {
+        display: inline-block;
+        color: #fff;
+        font-size: 0.8em;
+        margin: 5px 15px;
+      }
+      .photo {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+      .photo img {
+        width: 100%;
+      }
+      .discount {
+        border: 1px solid white;
+        border-radius: 50%;
+      }
+      ol {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      footer {
+        background-color: #000;
+      }
+      footer p {
+        text-align: center;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+          <ul id="main_nav">
+            <li><a href="#intro">이용안내</a></li>
+            <li><a href="#notice">공지사항</a></li>
+            <li><a href="#sports">운동소개</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="intro">
+        <div class="page_title">
+          <h1>이용안내</h1>
+        </div>
+        <div class="content">
+          <div class="photo">
+            <img src="images/visual_img2.jpg" alt="sports" />
+          </div>
+          <div class="text">
+            <p>한번에 해결하는 종합 스포츠 예약 플랫폼</p>
+            <p>
+              영업시간 : 오전 11시 ~ 오후 8시
+              <i><small>휴무 : 공휴일</small></i>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="sports">
+        <div class="page_title">
+          <h1>운동소개</h1>
+        </div>
+        <div id="content">
+          <div class="photo">
+            <img src="images/article_boxing.jpg" alt="복싱이미지" />
+          </div>
+          <div id="text">
+            <p>복싱</p>
+            <p>
+              칼로리 소모가 많고 대부분의 동작이 연속되게 이루어져 있어 심폐
+              지구력 향상에 좋습니다. 다양한 근육을 사용하여 몸의 여러 기능을
+              활성화시킬 수 있고 다이어트에 적합합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="notice">
+        <div class="page_title">
+          <h1>공지사항</h1>
+        </div>
+        <div class="content">
+          <div class="photo">
+            <img
+              class="discount"
+              src="images/banner1.png"
+              alt="회원가입시 10% 할인"
+            />
+          </div>
+          <div class="text">
+            <h2>현재 진행중인 이벤트</h2>
+          </div>
+          <ol>
+            <li>회원가입시 10% 할인</li>
+            <li>1회 무료 강습 이벤트</li>
+            <li>출석 이벤트 진행중</li>
+          </ol>
+        </div>
+      </section>
+      <footer>
+        <p>Sports Schedule Maker로 여러분의 건강을 챙겨 보세요</p>
+      </footer>
+    </div>
+  </body>
+</html>
